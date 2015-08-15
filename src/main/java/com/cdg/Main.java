@@ -11,7 +11,7 @@ public class Main {
 		
 		fileManager.readLineFromFile("src/main/java/com/cdg/data.txt");
 		
-		masker.maskPersonalData(fileManager.contents);
+		masker.maskPersonalData(fileManager.getContents());
 		
 		fileManager.writeMaskingDataToFile("src/main/java/com/cdg/result.txt");
 		

@@ -12,9 +12,17 @@ import java.util.List;
 
 public class FileManager {
 
-	List<String> contents;
+	private List<String> contents;
 	
 	
+	public List<String> getContents() {
+		return contents;
+	}
+
+	public void setContents(List<String> contents) {
+		this.contents = contents;
+	}
+
 	public void readLineFromFile(String filename) throws IOException {
 
 		String temp;
@@ -40,9 +48,9 @@ public class FileManager {
 
 		System.setOut(ps);
 		// System.setErr(ps);
-
-		for(int i = 0; i < contents.size(); i++) {
-			System.out.println(contents.get(i));
+		
+		for(String s : contents) {
+			System.out.println(s);
 		}
 
 		System.setOut(sysout);
